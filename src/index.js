@@ -1,9 +1,9 @@
 const Asteroid = require('./asteroid.js');
 const MovingObject = require('./moving_object.js');
-window.asteroid = Asteroid;
-window.MovingObject = MovingObject;
+// window.thisAsteroid = new Asteroid({ pos: [30, 30] });
+// window.MovingObject = MovingObject;
 
-Asteroid();
+// const thisAsteroid = new Asteroid();
 
 document.addEventListener('DOMContentLoaded', () => {
     const canvas1 = document.getElementById('canvas');
@@ -11,6 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     canvas1.width = 900;
     canvas1.height = 600;
     
-    const circle = new MovingObject([100, 100], [1, 1], 50, "red");
-    circle.draw(ctx); 
+    const asteroid1 = new Asteroid([60, 60]);
+    asteroid1.draw(ctx); 
 })
